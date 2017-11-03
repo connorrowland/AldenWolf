@@ -1,0 +1,152 @@
+@import "./variables.less";
+
+#homepage{
+  background-color: @beige;
+}
+#home--header{
+  margin-top: 130px;
+}
+.left-column{
+  width: 509px;
+  text-align: right;
+  padding-right: 30px;
+  .left-column--text{
+    max-width: 300px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+.right-column{
+  width: 509px;
+  text-align: left;
+  padding-left: 30px;
+  .right-column--text{
+    max-width: 300px;
+    margin-left: auto;
+    margin-left: 0;
+  }
+}
+.center-column{
+  width: 360px;
+  min-width: 360px;
+  border-left: 1px solid #121212;
+  border-right: 1px solid #121212;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.center-column--text{
+  h1{
+    margin-bottom: 50px;
+  }
+}
+.grid--container{
+  display: flex;
+  flex-direction: row;
+}
+#blue-square-img{
+  width: 100%;
+  height: auto;
+}
+#pink-square-img{
+  width: 100%;
+  height: auto;
+}
+#home--footer{
+  background-color: @dk_gray;
+  #footer--inner-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+#footer--contact-link{
+  color: white;
+  font-size: 18px;
+  line-height: 1;
+}
+#footer--right-items{
+  p{
+    color: white;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+}
+#section-1--grid{
+  .center-column{
+    .center-column--text{
+      p{
+        margin-bottom: 140px;
+      }
+    }
+  }
+}
+#home--section-2{
+  .grid--container{
+    .center-column{
+      .center-column--text{
+        h1{
+          margin-top: 0;
+        }
+        p{
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+#home--section-4{
+  .grid--container{
+    .center-column{
+      .center-column--text{
+        h1{
+          margin-top: 130px;
+        }
+        p{
+          margin-bottom: 130px;
+        }
+      }
+    }
+  }
+}
+#home--section-6{
+  .grid--container{
+    .left-column{
+      .left-column--text{
+        margin-top: 400px;
+      }
+    }
+    .center-column{
+      .center-column--text{
+        margin-top: 525px;
+        margin-bottom: 400px;
+        p{
+          margin-bottom: 130px;
+        }
+        :last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+#section-6--heading{
+  margin-bottom: 0;
+}
+#section-6--subheading-1{
+  margin-top: 0;
+}
+#section-6--subheading-2{
+  margin-top: 270px;
+}
+#section-6--subheading-3{
+  margin-top: 265px;
+}
+#downward-arrow{
+  height: 65px;
+  width: auto;
+  margin-bottom: 80px;
+}
