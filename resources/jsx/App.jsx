@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 
 import WorkTogetherForm from './WorkTogetherForm.jsx';
 import NavBar from './NavBar.jsx';

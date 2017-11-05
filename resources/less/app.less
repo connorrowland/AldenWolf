@@ -9,6 +9,10 @@ h1{
   font-size: 36px;
   letter-spacing: 1px;
   line-height: 59px;
+  @media (max-width: 992px){
+    font-size: 27px;
+    line-height: 42px;
+  }
 }
 h2{
   font-family: 'Guillon-Regular', Arial, Helvetica, sans-serif;
@@ -16,21 +20,28 @@ h2{
   letter-spacing: 0;
   line-height: 51px;
   color: @cornflower_blue;
+  @media (max-width: 992px){
+    font-size: 25px;
+    line-height: 37px;
+  }
 }
 p{
   font-family: 'Guillon-Regular', Arial, Helvetica, sans-serif;
   font-size: 24px;
   letter-spacing: 1px;
   line-height: 47px;
+  @media (max-width: 992px) {
+    font-size: 19px;
+    line-height: 43px;
+  }
 }
 button{
   font-family: 'Guillon-Regular', Arial, Helvetica, sans-serif;
   padding: 15px 30px;
   font-size: 10px;
   letter-spacing: 0.5px;
-  line-height: 1;
   outline: none;
-  border-radius: 2px;
+  border-radius: 0;
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
@@ -40,6 +51,12 @@ button{
   background-color: @dk_gray;
   cursor: pointer;
   color: white;
+  pointer-events: all;
+}
+.button--primary-disabled{
+  background-color: rgba(49, 49, 49, 0.14);
+  cursor: auto;
+  pointer-events: none;
 }
 .button--primary:hover{
   background-color: #414141;
@@ -57,11 +74,10 @@ header{
 }
 .form-control{
   font-family: 'Guillon-Regular', Arial, Helvetica, sans-serif;
-  height: 80px;
-  padding: 15px;
-  font-size: 28px;
+  padding: 15px 0;
+  font-size: 15px;
   letter-spacing: 0;
-  line-height: 51px;
+  height: 43px;
   color: #C5B7A8;
   border-top: none;
   border-left: none;
@@ -80,15 +96,20 @@ header{
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+  color: black;
 }
 .error-message--text-input{
   color: #8A0A0A;
+}
+.error-message{
   letter-spacing: 0.8px;
   line-height: 0;
-  margin-bottom: 15px;
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #8A0A0A;
 }
 .form-label{
-  font-size: 18px;
+  font-size: 14px;
   color: #000000;
   line-height: 20px;
   font-family: 'Guillon-Regular', Arial, Helvetica, sans-serif;
@@ -103,11 +124,79 @@ header{
   right: 0;
   z-index: 99;
   background: @beige;
+  background-image: url("/images/BG_Noise.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
   transition: -webkit-box-shadow 0.3s ease-in-out;
   -o-transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  .nav-grid--container{
+    display: flex;
+    flex-direction: row;
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 1200px){
+      width: 100%;
+    }
+    @media (max-width: 992px) and (min-width: 768px){
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .nav-left-column{
+    width: 509px;
+    padding-right: 30px;
+    @media (max-width: 992px) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    @media (max-width: 768px) {
+      border-right: none;
+      border-left: 1px solid #121212;
+      align-items: center;
+      padding-left: 15px;
+      width: 50%;
+    }
+  }
+  .nav-center-column{
+    width: 360px;
+    min-width: 360px;
+    border-left: 1px solid #121212;
+    border-right: 1px solid #121212;
+    padding-left: 30px;
+    padding-right: 30px;
+    @media (max-width: 992px) {
+      width: 300px;
+      min-width: 300px;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .nav-right-column{
+    width: 509px;
+    padding-left: 30px;
+    @media (max-width: 992px) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    @media (max-width: 768px) {
+      border-left: none;
+      border-right: 1px solid #121212;
+      align-items: center;
+      padding-right: 15px;
+      width: 50%;
+    }
+  }
 }
 .header-navbar--inner{
   display: -webkit-box;
@@ -119,9 +208,9 @@ header{
   -webkit-box-align: flex-start;
       -ms-flex-align: flex-start;
           align-items: flex-start;
-  padding: 20px 35px;
+  padding: 20px 25px;
   @media (max-width: 575px) {
-    padding: 11px 14px;
+    padding: 25px 11px;
   }
 }
 #header-navbar--actions-container{
@@ -134,14 +223,26 @@ header{
     line-height: 1;
     border-bottom: 1px solid black;
     cursor: pointer;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }
 #header-navbar--logo{
   img{
     height: auto;
-    width: 183px;
-    @media (max-width: 575px) {
-      height: 95px;
+    width: 190px;
+    -webkit-transition: width 0.3s ease-out;
+    -o-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out;
+    @media (max-width: 992px) {
+      width: 160px;
     }
+    @media (max-width: 768px) {
+      width: 109px;
+    }
+  }
+  .logo--scroll{
+    width: 120px
   }
 }

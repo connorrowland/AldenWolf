@@ -12,33 +12,37 @@
   <meta content='Alden Wolf, creative, startups'>
   <meta content='product' property='og:type'>
   <meta content='Alden Wolf' property='og:title'>
-  <!-- <meta content='*knaq url' property='og:url'> -->
-  <!-- <meta content="*knaq url" name="twitter:url"/> -->
-  <!-- <meta content='*knaq og photo' property='og:image'> -->
+  <meta content='https://aldenwolf.com/' property='og:url'>
+  <meta content="https://aldenwolf.com/" name="twitter:url"/>
+  <meta content='/images/Black_Circle.png' property='og:image'>
   <meta content='product' name='twitter:card'>
-  <!-- <meta content='*knaq twitter handle' name='twitter:site'> -->
-  <!-- <meta content='*knaq twitter share image' name='twitter:image'> -->
+  <meta content='https://aldenwolf.com/' name='twitter:site'>
+  <meta content='/images/Black_Circle.png' name='twitter:image'>
   <meta content='Practical creative for fast-growing startups.' name='twitter:title'>
-  <!-- <meta content='*Knaq description' name='twitter:description'> -->
+  <meta content='We specialize in meeting the needs of lean, ever-changing organizations. Our work is designed to meaningfully impact your business today and set you up beautifully for what’s ahead.' name='twitter:description'>
 
-  <!-- For third-generation iPad with high-resolution Retina display: -->
-  <!-- Size should be 144 x 144 pixels -->
-  <link rel="apple-touch-icon-precomposed" type="image/png" href="" sizes="144x144" />
-  <!-- For iPhone with high-resolution Retina display: -->
-  <!-- Size should be 114 x 114 pixels -->
-  <link rel="apple-touch-icon-precomposed" type="image/png" href="" sizes="114x114" />
-  <!-- For first- and second-generation iPad: -->
-  <!-- Size should be 72 x 72 pixels -->
-  <link rel="apple-touch-icon-precomposed" type="image/png" href="" sizes="72x72" />
-  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-  <!-- Size should be 57 x 57 pixels -->
-  <link rel="apple-touch-icon-precomposed" type="image/png" href="" />
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="" />
-  <link rel="icon" type="image/png" href="." />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/icons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/icons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/icons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/icons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/icons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/icons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/icons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/icons/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/images/icons/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/images/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/images/icons/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="Alden Wolf"/>
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
   <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./js/vendor.js"></script>
   <script src="./js/bundle.js"></script>
 
@@ -48,11 +52,19 @@
   <main id="homepage-main">
     <header id="home--header">
       <div class="grid--container container" id="section-1--grid">
+        <div class="mobile-hatch-container">
+          <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+          <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+        </div>
         <div class="left-column"></div>
         <div class="center-column">
           <div class="center-column--text">
             <h1>Practical creative for fast-growing startups.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="hatch-container hatch-container-desktop">
+              <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+              <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+            </div>
+            <p id="first-text">We specialize in meeting the needs of lean, ever-changing organizations. Our work is designed to meaningfully impact your business today and set you up beautifully for what’s ahead.</p>
           </div>
         </div>
         <div class="right-column"></div>
@@ -61,37 +73,57 @@
     <section id="home--section-2">
       <div class="grid--container container">
         <div class="left-column">
-          <img id="blue-square-img" src="./images/Blue_Square.png" alt="Alden Wolf Image">
+          <div id="blue-square" class="fade-in-squares">
+            <div id="blue-square--inner">
+              <img id="blue-square-stamp" src="./images/Blue_Square_Stamp.png" alt="Alden Wolf Stamp">
+            </div>
+          </div>
+        </div>
+        <div class="mobile-hatch-container">
+          <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+          <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
         </div>
         <div class="center-column">
           <div class="center-column--text">
-            <h1>We believe</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h1>Scrappy ethos. Strategic approach.</h1>
+            <div class="hatch-container hatch-container-desktop">
+              <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+              <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+            </div>
+            <p>We’re undaunted by tight timelines and real-world budgets. Limitations help us focus on what’s essential and do our best work.</p>
             <img id="downward-arrow" src="./images/Downward_Arrow.png" alt="Downward Arrow">
           </div>
         </div>
         <div class="right-column">
-          <img id="pink-square-img" src="./images/Pink_Square.png" alt="Alden Wolf Image">
+          <div id="pink-square" class="fade-in-squares">
+            <img id="pink-square-stamp" src="./images/Pink_Square_Stamp.png" alt="Alden Wolf Stamp">
+          </div>
         </div>
       </div>
     </section>
     <section id="home--section-3">
       <div class="grid--container container">
         <div class="left-column">
-         <div class="left-column--text">
-           <h1>Full range of creative needs</h1>
+         <div class="left-column--text" id="section-3-left-column--text">
+           <h1>We’re a full-service shop.</h1>
            <p>
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              In our careers, we’ve often been among the first creative hires at young companies. So, we’ve learned to run the gamut.
            </p>
          </div>
         </div>
         <div class="center-column">
+          <div class="center-column--text">
+            <div class="hatch-container hatch-container-desktop">
+              <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+              <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+            </div>
+          </div>
         </div>
         <div class="right-column">
-          <div class="right-column--text">
-            <h1>Fast turnaround, everytime</h1>
+          <div class="right-column--text" id="section-3-right-column--text">
+            <h1>We move pretty fast.</h1>
             <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              We get started ASAP, build momentum and keep it going. We share your sense of urgency and we’re inspired by it.
             </p>
           </div>
         </div>
@@ -101,9 +133,9 @@
       <div class="grid--container container">
         <div class="left-column"></div>
         <div class="center-column">
-          <div class="center-column--text">
-            <h1>Demystifying the creative process</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <div class="center-column--text" id="section-4-center-column--text">
+            <h1>We focus on conversion.</h1>
+            <p>We aim to clearly communicate your unique offering and help you connect with the people who will benefit most from it.</p>
           </div>
         </div>
         <div class="right-column"></div>
@@ -113,19 +145,25 @@
       <div class="grid--container container">
         <div class="left-column">
          <div class="left-column--text">
-           <h1>Competitive branding</h1>
-           <p>
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-           </p>
+            <h1>We keep costs down.</h1>
+            <p>
+              High-quality creative should be affordable for businesses that need it. We’re efficient with our time and that’s always reflected in our rates.
+            </p>
          </div>
         </div>
         <div class="center-column">
+          <div class="center-column--text">
+            <div class="hatch-container hatch-container-desktop">
+              <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+              <img class="hatch-image" src="./images/Hatch.png" alt="Alden Wolf Hatch">
+            </div>
+          </div>
         </div>
         <div class="right-column">
           <div class="right-column--text">
-            <h1>Transparent affordable pricing</h1>
+            <h1>We help you stay competitive.</h1>
             <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              We always deliver clean, contemporary work that helps you look the part while standing out from the pack.
             </p>
           </div>
         </div>
@@ -135,33 +173,45 @@
       <div class="grid--container container">
         <div class="left-column">
          <div class="left-column--text">
-           <h1 id="section-6--heading">How we’ll work together</h1>
-           <h2 id="section-6--subheading-1">We establish strong alignment from day 1.</h2>
-
-           <h2 id="section-6--subheading-2">Level up your brand and creative assets</h2>
-
-           <h2 id="section-6--subheading-3">Ongoing creative support based on a clear foundation</h2>
+            <h1 id="section-6--heading">This is our approach.</h1>
+            <h2 id="section-6--subheading-1">Start with a solid foundation.</h2>
+            <p class="section-6--mobile-text">
+              We establish goals and build alignment from the get-go, so we can make better decisions, faster as we go.
+            </p>
+            <h2 id="section-6--subheading-2">Keep the work simple and clear.</h2>
+            <p class="section-6--mobile-text" id="section-6--mobile-text-left">
+              Our process is transparent and straightforward, so you’ll always know where we’re at and what’s coming next.
+            </p>
+            <h2 id="section-6--subheading-3">Lay the groundwork for ongoing collaboration.</h2>
+            <p class="section-6--mobile-text">
+              We’re here to support you as new needs arise. We’ll build on our prior work together to deliver consistently on-brand creative every time.
+            </p>
          </div>
         </div>
         <div class="center-column">
           <div class="center-column--text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            <p id="section-6-text-1" class="section-6--desktop-text">
+              We establish goals and build alignment from the get-go, so we can make better decisions, faster as we go.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            <p id="section-6-text-2" class="section-6--desktop-text">
+              Our process is transparent and straightforward, so you’ll always know where we’re at and what’s coming next.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            <p id="section-6-text-3" class="section-6--desktop-text">
+              We’re here to support you as new needs arise. We’ll build on our prior work together to deliver consistently on-brand creative every time.
             </p>
           </div>
         </div>
         <div class="right-column">
+          <div id="section-6--circle-progression">
+            <img id="small-black-circle" src="./images/Black_Circle.png" alt="Alden Wolf Stamp">
+            <img id="blue-circle" src="./images/Blue_Circle.png" alt="Alden Wolf Stamp">
+            <img id="orange-circle" src="./images/Orange_Circle.png" alt="Alden Wolf Stamp">
+          </div>
         </div>
       </div>
     </section>
     <section id="home--section-7">
-      <div class="grid--container" id="form-area">
+      <div class="grid--container container" id="form-area">
         <div class="left-column">
         </div>
         <div class="center-column">

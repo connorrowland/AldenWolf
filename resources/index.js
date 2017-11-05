@@ -7,3 +7,6 @@ require('assets/less/app');
 
 // React app
 require('assets/jsx/App');
+
+// Misc Js
+require('assets/js/app')
