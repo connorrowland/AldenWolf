@@ -11,7 +11,7 @@ class NavBar extends React.Component {
         <div className="nav-grid--container">
           <div className="nav-left-column header-navbar--inner">
             <div id="header-navbar--logo">
-              <img id="logo" src="./images/AW_Logo.png" alt="Alden Wolf Logo"/>
+              <img id="logo" src="/images/AW_Logo.png" alt="Alden Wolf Logo"/>
             </div>
           </div>
           <div className="nav-center-column"></div>

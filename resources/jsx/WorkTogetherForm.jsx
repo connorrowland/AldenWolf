@@ -19,22 +19,20 @@ class WorkTogetherForm extends React.Component {
       }
     }
 
-    handleSubmit(data){
+    handleSubmit(){
       var signUpData = {
-        'full_name':this.state.name,
+        'name':this.state.full_name,
         'email': this.state.email,
         'website': this.state.website
       }
       $.ajax({
-        url: "/",
-        type: "POST",
-        data: JSON.stringify(signUpData),
-        contentType: 'application/json;charset=UTF-8',
-        dataType: 'json',
-        cache: false,
+        url: "https://formspree.io/connor@aldenwolf.com",
+        method: "POST",
+        dataType: "json",
+        data: signUpData,
         success: function(data) {
           this.setState({
-              hasSubmittedInformation: true
+            hasSubmittedInformation: true
           });
         }.bind(this),
         error: function(xhr, status, err) {
@@ -94,22 +92,20 @@ class WorkTogetherForm extends React.Component {
                 We’d love to hear about what you’re working on and share some of our work with you.
               </p>
             </div>
-            <form>
-              <div className="form-group">
-                <label className="form-label" for="full_name">Your name</label>
-                <input type="text" className="form-control" id="full_name" placeholder="A name I call myself" onChange={this.handleFormChange}/>
-              </div>
-              <div className="form-group">
-                <label className="form-label" for="email">Your email</label>
-                {errorMessage}
-                <input type="email" className={errorFormClass} id="email" placeholder="me@meforever.com" onBlur={this.validateEmail} onChange={this.handleFormChange}/>
-              </div>
-              <div className="form-group">
-                <label className="form-label" for="phone_number">Website</label>
-                <input type="text" className="form-control" id="website" placeholder="sayrhino.com" onChange={this.handleFormChange}/>
-              </div>
-              <button type="submit" id="demo-form--submit" className={validFormClasses + " button--primary"} onClick={this.handleSubmit}>Let’s talk</button>
-            </form>
+            <div className="form-group">
+              <label className="form-label" for="full_name">Your name</label>
+              <input type="text" className="form-control" id="full_name" placeholder="A name I call myself" onChange={this.handleFormChange}/>
+            </div>
+            <div className="form-group">
+              <label className="form-label" for="email">Your email</label>
+              {errorMessage}
+              <input type="email" className={errorFormClass} id="email" placeholder="me@meforever.com" onBlur={this.validateEmail} onChange={this.handleFormChange}/>
+            </div>
+            <div className="form-group">
+              <label className="form-label" for="website">Website</label>
+              <input type="text" className="form-control" id="website" placeholder="sayrhino.com" onChange={this.handleFormChange}/>
+            </div>
+            <button id="demo-form--submit" className={validFormClasses + " button--primary"} onClick={this.handleSubmit}>Let’s talk</button>
           </div>
         );
     }
