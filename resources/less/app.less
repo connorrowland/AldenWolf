@@ -133,8 +133,13 @@ header{
   transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
   .nav-grid--container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 1170px;
     margin-left: auto;
     margin-right: auto;
@@ -162,7 +167,9 @@ header{
     @media (max-width: 768px) {
       border-right: none;
       border-left: 1px solid #121212;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       padding-left: 15px;
       width: 50%;
     }
@@ -192,7 +199,9 @@ header{
     @media (max-width: 768px) {
       border-left: none;
       border-right: 1px solid #121212;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       padding-right: 15px;
       width: 50%;
     }
