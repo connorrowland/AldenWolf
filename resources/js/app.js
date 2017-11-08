@@ -83,7 +83,7 @@ function fadeInWhenBottomReached(bottomObject, objectOneToAnimate, objectTwoToAn
 
 //Exclusively Mobile Animation Function
 function fadeInWhenBottomReachedMobile(mobileObjectToAnimate, listenerToTerminate, mobileBottomObj){
-  var bottom_of_object = $(mobileBottomObj).offset().top + $(mobileBottomObj).outerHeight() + 300;
+  var bottom_of_object = $(mobileBottomObj).offset().top + $(mobileBottomObj).outerHeight() + 200;
   var bottom_of_window = $(window).scrollTop() + $(window).height();
   if( bottom_of_window > bottom_of_object ){
     $(mobileObjectToAnimate).css('visibility', 'visible').hide().fadeIn(700)
