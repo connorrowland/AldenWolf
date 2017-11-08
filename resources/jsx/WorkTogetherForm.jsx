@@ -27,7 +27,7 @@ class WorkTogetherForm extends React.Component {
         'website': this.state.website
       }
       $.ajax({
-        url: "https://formspree.io/hello@aldenwolf.com",
+        url: "http://formspree.io/hello@aldenwolf.com",
         method: "POST",
         dataType: "json",
         data: signUpData,
