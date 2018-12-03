@@ -20,14 +20,17 @@ class WorkTogetherForm extends React.Component {
       }
     }
 
-    handleSubmit(){
-      var signUpData = {
-        'name':this.state.full_name,
-        'email': this.state.email,
-        'website': this.state.website
+    handleSubmit(event){
+      event.preventDefault();
+
+      const signUpData = {
+        full_name: this.state.full_name,
+        email: this.state.email,
+        website: this.state.website
       }
+
       $.ajax({
-        url: "http://formspree.io/hello@aldenwolf.com",
+        url: "https://formspree.io/myplrzvx",
         method: "POST",
         dataType: "json",
         data: signUpData,
@@ -99,16 +102,16 @@ class WorkTogetherForm extends React.Component {
           </div>
           <div className="form-group">
             <label className="form-label" for="full_name">Your name</label>
-            <input type="text" className="form-control" id="full_name" placeholder="What should we call you?" onChange={this.handleFormChange}/>
+            <input type="text" className="form-control" name="name" id="full_name" placeholder="What should we call you?" onChange={this.handleFormChange} value={this.state.full_name}/>
           </div>
           <div className="form-group">
             <label className="form-label" for="email">Your email</label>
             {errorMessage}
-            <input type="email" className={errorFormClass} id="email" placeholder="How can we reach you?" onBlur={this.validateEmail} onChange={this.handleFormChange}/>
+            <input type="email" className={errorFormClass} name="email" id="email" placeholder="How can we reach you?" onBlur={this.validateEmail} onChange={this.handleFormChange} value={this.state.email}/>
           </div>
           <div className="form-group">
             <label className="form-label" for="website">Website</label>
-            <input type="text" className="form-control" id="website" placeholder="This is totally optional." onChange={this.handleFormChange}/>
+            <input type="text" className="form-control" name="website" id="website" placeholder="This is totally optional." onChange={this.handleFormChange} value={this.state.website}/>
           </div>
           <button id="demo-form--submit" className={validFormClasses + " button--primary"} onClick={this.handleSubmit}>Let’s talk</button>
         </div>
