@@ -7,23 +7,29 @@ $(document).ready(function(){
     }
   });
 
-  var sceneClasses = ["pink-square--fade-in", "blue-square--fade-in", "section-3-text-one--fade-in", "section-3-text-two--fade-in", "section-4-center-text--fade-in", "section-6-stamp-one--fade-in", "section-6-stamp-two--fade-in", "section-6-stamp-three--fade-in"];
+  var viewer      = document.querySelector('#homepage-main'),
+      frameCount  = 35,
+      offsetValue = 130;
 
-  var triggerElements = ["#first-text", "#pink-square", "#blue-square", "#blue-square", "#section-3-right-column--text", "#section-6--heading", "#section-6--heading", "#section-6--heading"];
+  new ScrollMagic.Scene({
+    triggerElement: '#home--header',
+    duration: (frameCount * offsetValue) + 'px',
+    reverse: true
+  })
+  .addTo(controller);
 
-  var offsetAmounts = [0, -100, -50, 150, 40, -200, 50, 250];
-
-  var viewer = document.querySelector('#homepage-main');
-
-  for (var i = 0, l = 7; i <= l; i++) {
+  // Create scene for each of the animated items
+  for (var i = 1, l = frameCount; i <= l; i++) {
+    var offsetTotal = i * offsetValue;
+    if (i === 1) {
+      offsetTotal = 0;
+    }
     new ScrollMagic.Scene({
-      triggerElement: triggerElements[i],
-      offset: offsetAmounts[i],
-      duration: 600,
-      reverse: true
-    })
-    .setClassToggle(viewer, sceneClasses[i])
-    .addTo(controller);
+        triggerElement: '#home--header',
+        offset: offsetTotal
+      })
+      .setClassToggle(viewer, 'frame' + i)
+      .addTo(controller);
   }
 
 })
